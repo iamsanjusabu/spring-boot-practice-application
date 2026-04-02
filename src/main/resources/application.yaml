@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spring-security-jpa
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/testdb}
+    username: ${SPRING_DATASOURCE_USERNAME:sanju}
+    password: ${SPRING_DATASOURCE_PASSWORD:sanju1234}
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  security:
+    user:
+      name: sanju
+      password: sanju1234
