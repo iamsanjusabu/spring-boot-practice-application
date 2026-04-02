@@ -5,12 +5,11 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @Entity
 @Table(name = "users_table")
-public class UserTable {
+public class User {
 
     @Id
     @Column(name = "id")
@@ -26,4 +25,7 @@ public class UserTable {
 
     @Column(name = "gender", columnDefinition = "CHAR(1)")
     private Character gender;
+
+    @Column(name = "email", columnDefinition = "VARCHAR(50)")
+    private String email;
 }
