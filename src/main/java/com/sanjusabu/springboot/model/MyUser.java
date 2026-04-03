@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "users_table")
-public class User {
+public class MyUser {
 
     @Id
     @Column(name = "id")
@@ -28,4 +28,7 @@ public class User {
 
     @Column(name = "email", columnDefinition = "VARCHAR(50)")
     private String email;
+
+    @Column(name = "password", columnDefinition = "TEXT")
+    private String password;
 }

@@ -17,7 +17,7 @@ public class InMemoryUserService {
     ));
 
 
-    public List<UserDTO> getAllUsers() {
+    public List<UserDTO> getAllUsers()  {
         return users;
     }
 
