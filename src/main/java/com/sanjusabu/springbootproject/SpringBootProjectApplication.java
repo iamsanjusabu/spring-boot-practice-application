@@ -13,7 +13,6 @@ public class SpringBootProjectApplication implements CommandLineRunner {
         SpringApplication.run(SpringBootProjectApplication.class, args);
     }
 
-
     @Override
     public void run(String... args) {
         log.info("Application started");

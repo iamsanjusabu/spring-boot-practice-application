@@ -15,6 +15,7 @@ public class MiscController {
         return "pong";
     }
 
+    // It doesn't work when CSRF is disabled in configuration
     @GetMapping("get-csrf-token")
     public CsrfToken getCsrfToken(HttpServletRequest request) {
         return (CsrfToken) request.getAttribute("_csrf");

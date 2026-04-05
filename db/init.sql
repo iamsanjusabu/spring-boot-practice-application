@@ -4,6 +4,6 @@ CREATE TABLE user_table (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     username VARCHAR(20) NOT NULL,
     password CITEXT NOT NULL,
-    gender CHAR(1) NOT NULL CHECK (IN ('M', 'F', 'O')),
+    gender CHAR(1) NOT NULL CHECK (gender IN ('M', 'F', 'O')),
     email VARCHAR(255) NOT NULL
 );

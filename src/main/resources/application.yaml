@@ -13,3 +13,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: none
+
+  security:
+    user:
+      name: sanju
+      password: sanju1234
