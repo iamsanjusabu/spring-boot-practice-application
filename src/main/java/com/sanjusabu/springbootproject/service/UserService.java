@@ -15,8 +15,8 @@ import java.util.Optional;
 @Service
 public class UserService {
 
-    final private UserRepository userRepository;
-    final private PasswordEncoder passwordEncoder;
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
 
     public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
@@ -43,7 +43,7 @@ public class UserService {
 
     // (POST) to CREATE a user
     public ResponseEntity<UserResponseDTO> createUser(UserRequestDTO userToBeCreated) {
-        Optional<MyUser> userFromDB = userRepository.findByEmail(userToBeCreated.getEmail());
+        Optional<MyUser> userFromDB = userRepository.findByEmail(userToBeCreated.getUsername());
 
         if (userFromDB.isEmpty()) {
             MyUser user = new MyUser();
