@@ -1,12 +1,9 @@
-CREATE TABLE users_table (
+CREATE EXTENSION IF NOT EXISTS CITEXT;
+
+CREATE TABLE user_table (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    name VARCHAR(15) NOT NULL,
-    age INT NOT NULL,
-    gender CHAR(1) NOT NULL CHECK (GENDER IN ('M', 'F')),
-    email VARCHAR(50),
-    password TEXT NOT NULL
+    username VARCHAR(20) NOT NULL,
+    password CITEXT NOT NULL,
+    gender CHAR(1) NOT NULL CHECK (IN ('M', 'F', 'O')),
+    email VARCHAR(255) NOT NULL
 );
-
-
-INSERT INTO users_table(name, age, gender, email, password)
-VALUES ('Sanju', 19, 'M', 'sanjusabu@icloud.com', 'adminPower');

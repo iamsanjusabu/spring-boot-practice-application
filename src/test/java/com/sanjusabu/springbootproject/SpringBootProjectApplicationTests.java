@@ -1,10 +1,10 @@
-package com.sanjusabu.springboot;
+package com.sanjusabu.springbootproject;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringSecurityJpaApplicationTests {
+class SpringBootProjectApplicationTests {
 
     @Test
     void contextLoads() {
